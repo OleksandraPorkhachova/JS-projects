@@ -1,0 +1,356 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Nerko One", cursive;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+
+.header {
+  height: 100vh;
+  padding: 60px 86px;
+  background-image: url(img/head-pic.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.header__title {
+  color: #1d1c58;
+  text-align: center;
+  font-family: Nerko One;
+  font-size: 150px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: transparent;
+  -webkit-text-stroke: 5px white;
+  margin-top: 155px;
+  text-shadow: #1d1c58 5px 0 30px;
+}
+
+.burger__menu {
+  height: 40px;
+  position: absolute;
+  right: 86px;
+}
+
+.burger__menu:hover {
+  background-image: url(img/icon/image\ 1\ –\ hover.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Main menu */
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 40px 66px;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgba(249, 212, 246, 0.5) 60%,
+    #f9d4f6 40%
+  );
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 600ms;
+  padding-left: 65%;
+}
+
+.menu:target {
+  transform: translateX(0);
+}
+
+.closed_icon {
+  height: 40px;
+}
+
+.menu__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__title {
+  color: #fff;
+  text-align: center;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 3.2px;
+  -webkit-text-stroke: 2px #1d1c58;
+  padding-left: 150px;
+  text-transform: uppercase;
+}
+
+.menu__cont {
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+  margin-top: 53px;
+  list-style-type: none;
+}
+
+.menu__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #1d1c58;
+  text-align: center;
+  font-size: 48px;
+  font-style: bold;
+  line-height: normal;
+  -webkit-text-stroke: 1px white;
+  margin-left: 100px;
+}
+
+.menu__link:hover {
+  background: white;
+  padding: 8px 16px 8px 16px;
+  border-radius: 40%;
+}
+
+/* To-do list */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(img/3255337.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size:contain;
+  padding: 10px;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 640px;
+  background:white;
+  border: #1d1c58 solid 2px;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  box-shadow: 0px 25px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.todo-app__title {
+  color: #1d1c58;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 0;
+  font-size: 36px;
+}
+
+.todo-app__title img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.row button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #f9d4f6;
+  color: #1d1c58;
+  font-size: 21px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.task_list li {
+  list-style: none;
+  font-size: 21px;
+  padding: 10px 8px 10px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.task_list li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(img/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 10px;
+  left: 8px;
+}
+
+.task_list li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+.task_list li.checked::before {
+  background-image: url(img/checked.png);
+}
+
+.task_list li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.task_list li span:hover {
+  background: #edeef0;
+}
+
+/* Calculator */
+
+.container_calculator{
+  width: 95%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(img/calc.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.calculator{
+  width: 370px;
+  margin: auto;
+  border-radius: 2px;
+  background:  #f9d4f6;
+  padding: 15px 15px 20px 20px;
+  box-shadow: 0px 25px 10px 0px rgba(0, 0, 0, 0.5);
+  border: #1d1c58 solid 2px;
+  border-radius: 5%;
+}
+
+#user_input{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 40px 5px;
+  background: white;
+  text-align: right;
+  direction: ltr;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+}
+
+.btn{
+  width: 24%;
+  height: 45px;
+  border-radius: 1px;
+  border: none;
+  outline: none;
+  margin-top: 3px;
+  background: #f8f1f7;
+  font-size: 32px;
+}
+
+.btnEqual{
+  width: 99.2%;
+  height: 45px;
+  border-radius: 1px;
+  font-size: 32px;
+  border: none;
+  outline: none;
+  margin-top: 3px;
+  background: whitesmoke;
+}
+
+.btn:hover, .btnEqual:hover{
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+/* Subscribe */
+
+.container_subscribe {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 60px;
+  background: white;
+}
+
+.container_subscribe h2, p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 48px;
+  color: #1d1c58;
+}
+
+
+.subscribe_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.subscribe_form input {
+  width: 420px;
+  height: 50px;
+  font-size: 40px;
+  text-align: center;
+}
+
+#subscribe_btn {
+  height: 50px;
+  width: 100px;
+  font-size: 40px;
+  text-align: center;
+  margin-left: 5px;
+  background: #f9d4f6;
+  color: #1d1c58;
+}
+
+#subscribe_btn:hover {
+  background: #e960de;
+  color: #ffffff;
+}
+
+.footer {
+  background-image: url(img/5356723.jpg);
+  height: 260px;
+  background-position: center;
+  background-size: contain;
+}

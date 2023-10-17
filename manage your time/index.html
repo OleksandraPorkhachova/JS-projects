@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>JavaScript Projects</title>
+    <link rel="shortcut icon" href="img/icon/clock_2972531.png" />
+  </head>
+  <body>
+    <header class="header" id="home">
+      <a href="#main_menu"><img src="img/icon/image 1.png" class="burger__menu" /></a>
+      <div class="main__page">
+        <h1 class="header__title">
+          JAVASCRIPT <br>
+          PROJECTS
+        </h1>
+        </div>
+    <div class="menu" id="main_menu">
+      <div class="menu__top">
+        <h2 class="menu__title">Menu</h2>
+      <a href="#home"><img src="img/icon/6e165a71eb6247800e2a010a651d81a1.png" class="closed_icon"></a>
+      </div>
+      <ul class="menu__cont">
+        <li><a href="#todolist" class="menu__link">To-Do List</a></li>
+        <li><a href="#calculator" class="menu__link">Calculator</a></li>
+        <li><a href="#subscribe" class="menu__link">Subscribe</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <section id="todolist">
+      <div class="container">
+        <div class="todo-app">
+          <h2 class="todo-app__title">Your to-do list <img src="img/icon.png"></h2>
+          <div class="row">
+            <input class="input" type="text" id="input-box" placeholder="Add your task">
+            <button onclick="addTask()">Add</button>
+          </div>
+          <ul id="list-cont" class="task_list">
+            <!-- <li class="checked"> Task 1</li>
+            <li> Task 2</li>
+            <li> Task 3</li> -->
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="calculator">
+      <div class="container_calculator">
+        <div class="calculator">
+          <input id="user_input" placeholder="0">
+          <br>
+          <button class="btn" onclick="press(1)">1</button>
+          <button class="btn" onclick="press(2)">2</button>
+          <button class="btn" onclick="press(3)">3</button>
+          <button style="background:#ff66fa;" class="btn" onclick="press('+')">+</button>
+          <br>
+          <button class="btn" onclick="press(4)">4</button>
+          <button class="btn" onclick="press(5)">5</button>
+          <button class="btn" onclick="press(6)">6</button>
+          <button style="background: #f4a9e8;" class="btn" onclick="press('-')">-</button>
+          <br>
+          <button class="btn" onclick="press(7)">7</button>
+          <button class="btn" onclick="press(8)">8</button>
+          <button class="btn" onclick="press(9)">9</button>
+          <button style="background: #f6c2ee;" class="btn" onclick="press('*')">*</button>
+          <br>
+          <button class="btn" onclick="press('.')">.</button>
+          <button class="btn" onclick="press(0)">0</button>
+          <button class="btn" onclick="erase()">C</button>
+          <button style="background: #f4e5f2;" class="btn" onclick="press('/')">/</button>
+          <br>
+          <button class="btnEqual" onclick="equal()">=</button>
+        </div>
+      </div>
+    </section>
+    <section id="subscribe">
+      <div class="container_subscribe">
+        <h2>If you want to subscribe and receive new projects first:</h2>
+        <div class="subscribe_form"><input type="text" placeholder="Write your e-mail" id="inputBox">
+          <button id="subscribe_btn">Send</button></div>
+          <p>Thank you!</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+  </footer>
+  <script src="index.js"></script>
+  </body>
+</html>
