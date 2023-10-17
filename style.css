@@ -17,24 +17,53 @@
   background-size: contain;
 }
 
+@media(max-width:1024px){
+  .header {
+    padding: 20px 40px;
+    background-size: cover;
+}
+}
+
 .header__title {
   color: #1d1c58;
+  direction: flex;
+  justify-content: center;
   text-align: center;
   font-family: Nerko One;
   font-size: 150px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  background: transparent;
   -webkit-text-stroke: 5px white;
   margin-top: 155px;
   text-shadow: #1d1c58 5px 0 30px;
+}
+
+@media(max-width:1024px){
+  .header__title {
+    font-size: 110px;
+    -webkit-text-stroke: 3px white;
+}
+}
+
+@media(max-width:576px){
+  .header__title {
+    font-size: 96px;
+    -webkit-text-stroke: 3px white;
+    width: 100%;
+}
 }
 
 .burger__menu {
   height: 40px;
   position: absolute;
   right: 86px;
+}
+
+@media(max-width:576px){
+  .burger__menu {
+    right: 10px;
+}
 }
 
 .burger__menu:hover {
@@ -66,12 +95,27 @@
   padding-left: 65%;
 }
 
+@media(max-width:1024px){
+  .menu {
+  background:#f9d4f6;
+  padding-left: 0%;
+  text-align: center;
+}
+}
+
 .menu:target {
   transform: translateX(0);
 }
 
 .closed_icon {
   height: 40px;
+}
+
+
+@media(max-width:1024px){
+  .closed_icon {
+    height: 20px;
+}
 }
 
 .menu__top {
@@ -91,6 +135,7 @@
   padding-left: 150px;
   text-transform: uppercase;
 }
+
 
 .menu__cont {
   display: flex;
@@ -307,6 +352,14 @@
   gap: 30px;
   margin-top: 60px;
   background: white;
+  text-align: center;
+}
+
+@media (max-width:1024px) {
+  .container_subscribe {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
 .container_subscribe h2, p {
@@ -333,6 +386,13 @@
   text-align: center;
 }
 
+@media (max-width:1024px) {
+  .subscribe_form input {
+    width: 240px;
+    font-size: 28px;
+  }
+}
+
 #subscribe_btn {
   height: 50px;
   width: 100px;
@@ -341,6 +401,12 @@
   margin-left: 5px;
   background: #f9d4f6;
   color: #1d1c58;
+}
+
+@media (max-width:1024px) {
+  #subscribe_btn {
+    font-size: 28px;
+}
 }
 
 #subscribe_btn:hover {
@@ -353,4 +419,10 @@
   height: 260px;
   background-position: center;
   background-size: contain;
+}
+
+@media (max-width:1024px) {
+  .footer {
+    background-repeat: no-repeat;
+  }
 }
